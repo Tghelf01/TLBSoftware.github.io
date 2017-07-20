@@ -1,6 +1,7 @@
 //Latitude Longitude
 function initMap(){
-    mymap = L.map('map').setView([38.2527, -85.7585], 11);
+	
+    mymap = L.map('map').setView([38.2187494,-85.4745504], 11);
     var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
 	var osm = new L.TileLayer(osmUrl, {minZoom: 8, attribution: osmAttrib}).addTo(mymap);
@@ -40,7 +41,11 @@ function FeatureOnClick(e){
     L.geoJSON(returnedgeojson, 
         {
             style: ColorStreamsStyle, 
-            onEachFeature: (f, l) => {console.log(f, "feature"); console.log(l, "layer");}
+            onEachFeature: (f, l) => {
+	    	l.on('click', (e) =>{
+			console.log(e);	
+		}
+	    }
         }
     ).addTo(mymap);
 }
