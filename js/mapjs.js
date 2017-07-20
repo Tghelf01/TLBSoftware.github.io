@@ -44,7 +44,7 @@ function FeatureOnClick(e){
             onEachFeature: (f, l) => {
 	    	l.on('click', (e) =>{
 			console.log(e);	
-		}
+		});
 	    }
         }
     ).addTo(mymap);
