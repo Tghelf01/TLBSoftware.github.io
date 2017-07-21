@@ -1,6 +1,6 @@
 //Latitude Longitude
 function initMap(){
-	
+ //GOOD WORK 
     mymap = L.map('map').setView([38.2187494,-85.4745504], 14);
     var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
